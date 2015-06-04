@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    devtool: process.env.NODE_ENV !== 'production' ? 'eval' : null,
+    devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
 
     entry: "./app/App.js",
 
@@ -15,7 +15,7 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: /node_modules[\/\\]/,
-            loader: 'babel-loader'
+            loader: 'babel-loader?optional[]=es7.decorators'
         }, {
             test: /\.css$/,
             loader: "style!css"
@@ -32,7 +32,7 @@ module.exports = {
             }
         }),
         new webpack.ProvidePlugin({
-            React: "react"
+            React: "react/addons"
         })
     ]
 };
