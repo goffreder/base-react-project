@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "React": true
+  },
+  "rules": {
+    "no-console": 1
+  }
+}
