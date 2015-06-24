@@ -1,6 +1,6 @@
 class Test extends React.Component {
     render() {
-        console.log("Test");
+        console.log('Test');
 
         return (
             <div>It works!</div>
@@ -8,4 +8,4 @@ class Test extends React.Component {
     }
 }
 
-React.render(<Test/>, document.getElementById("app"));
+React.render(<Test/>, document.getElementById('app'));

@@ -29,6 +29,7 @@
     "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
+    "attachment-form": "goffreder/attachment-form",
     "axios": "^0.5.4",
     "flux": "^2.0.3",
     "keymirror": "^0.1.1",
