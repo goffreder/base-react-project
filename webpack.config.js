@@ -6,7 +6,7 @@ var version = require('./package.json').version;
 module.exports = {
     devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
 
-    entry: "./app/App.js",
+    entry: './app/App.js',
 
     output: {
         path: '__build__',

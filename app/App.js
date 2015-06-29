@@ -1,3 +1,5 @@
+import 'normalize-css';
+
 class Test extends React.Component {
     render() {
         console.log('Test');
