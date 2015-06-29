@@ -16,11 +16,11 @@ module.exports = {
 
     module: {
         preLoaders: [{
-            test: /\.js$/,
+            test: /\.js[x]?$/,
             loader: 'eslint-loader'
         }],
         loaders: [{
-            test: /\.js[x]$/,
+            test: /\.js[x]?$/,
             exclude: /node_modules[\/\\]/,
             loader: 'babel-loader?optional[]=es7.decorators'
         }, {
