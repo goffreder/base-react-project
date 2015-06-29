@@ -16,11 +16,11 @@ module.exports = {
 
     module: {
         preLoaders: [{
-            test: /\.js[x]?$/,
+            test: /\.jsx?$/,
             loader: 'eslint-loader'
         }],
         loaders: [{
-            test: /\.js[x]?$/,
+            test: /\.jsx?$/,
             exclude: /node_modules[\/\\]/,
             loader: 'babel-loader?optional[]=es7.decorators'
         }, {
@@ -46,7 +46,11 @@ module.exports = {
             }
         }),
         new webpack.ProvidePlugin({
-            React: "react/addons"
+            React: 'react/addons'
         })
-    ]
+    ],
+    
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    }
 };
