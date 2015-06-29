@@ -11,7 +11,7 @@
     "test": "babel-node test/tests.js",
     "check": "npm-check -s",
     "json-server": "json-server --watch db.json",
-    "lint": "eslint app --ext .js || true"
+    "lint": "eslint app --ext .js, .jsx || true"
   },
   "devDependencies": {
     "babel": "^5.5.8",
@@ -29,10 +29,10 @@
     "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
-    "attachment-form": "goffreder/attachment-form",
     "axios": "^0.5.4",
     "flux": "^2.0.3",
     "keymirror": "^0.1.1",
+    "normalize-css": "^2.3.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   }
