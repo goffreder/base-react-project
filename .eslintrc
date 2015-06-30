@@ -170,19 +170,22 @@
     "react/wrap-multilines": 2,
     "react/sort-comp": [2, {
       "order": [
+        "lifecycleprops",
         "constructor",
-        "lifecycle",
+        "lifecyclemethods",
         "everything-else",
         "render"
       ],
       "groups": {
-        "lifecycle": [
+        "lifecycleprops": [
           "displayName",
           "propTypes",
           "contextTypes",
           "childContextTypes",
           "mixins",
-          "statics",
+          "statics"
+        ],
+        "lifecyclemethods": [
           "getDefaultProps",
           "getInitialState",
           "getChildContext",
