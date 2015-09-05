@@ -1,7 +1,8 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "objects"
   ],
   "env": {
     "browser": true,
@@ -32,6 +33,12 @@
     "strict": [2, "never"],
 
     "no-var": 2,
+    "arrow-spacing": [2, {
+        "before": true,
+        "after": true
+    }],
+    "prefer-reflect": [2],
+    "prefer-spread": 2,
 
     "no-shadow": 2,
     "no-shadow-restricted-names": 2,
@@ -40,6 +47,10 @@
       "args": "after-used"
     }],
     "no-use-before-define": 2,
+    "init-declarations": [2, "always"],
+    "no-class-assign": 2,
+    "no-const-assign": 2,
+    "no-implicit-coercion": 2,
 
     "comma-dangle": [2, "never"],
     "no-cond-assign": [2, "always"],
@@ -58,7 +69,7 @@
     "no-invalid-regexp": 2,
     "no-irregular-whitespace": 2,
     "no-obj-calls": 2,
-    "no-reserved-keys": 2,
+    "quote-props": [2, "consistent-as-needed"],
     "no-sparse-arrays": 2,
     "no-unreachable": 2,
     "use-isnan": 2,
@@ -136,7 +147,7 @@
     "no-new-object": 2,
     "no-spaced-func": 2,
     "no-trailing-spaces": 2,
-    "no-wrap-func": 2,
+    "no-extra-parens": 0,
     "no-underscore-dangle": 0,
     "one-var": [2, "never"],
     "padded-blocks": [2, "never"],
@@ -150,7 +161,7 @@
     "space-before-function-paren": [2, "never"],
     "space-infix-ops": 2,
     "space-return-throw-case": 2,
-    "spaced-line-comment": 2,
+    "spaced-comment": 2,
 
     "react/display-name": 0,
     "react/jsx-boolean-value": 2,
@@ -170,22 +181,19 @@
     "react/wrap-multilines": 2,
     "react/sort-comp": [2, {
       "order": [
-        "lifecycleprops",
         "constructor",
-        "lifecyclemethods",
+        "lifecycle",
         "everything-else",
         "render"
       ],
       "groups": {
-        "lifecycleprops": [
+        "lifecycle": [
           "displayName",
           "propTypes",
           "contextTypes",
           "childContextTypes",
           "mixins",
-          "statics"
-        ],
-        "lifecyclemethods": [
+          "statics",
           "getDefaultProps",
           "getInitialState",
           "getChildContext",
