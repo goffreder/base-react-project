@@ -6,7 +6,7 @@ import { equal, test } from './testUtils';
 let passed = 0;
 let failed = 0;
 
-console.log('\n*** Section - MonthHeader component tests ***\n');
+console.log('\n*** Section - React component tests ***\n');
 
 test(() => {
     equal(
