@@ -76,7 +76,7 @@
     "block-scoped-var": 2,
 
     "consistent-return": 2,
-    "curly": [2, "multi-line"],
+    "curly": [2, "all"],
     "default-case": 2,
     "dot-notation": [2, {
       "allowKeywords": true
@@ -118,7 +118,7 @@
     "indent": [2, 4],
     "brace-style": [2,
       "1tbs", {
-      "allowSingleLine": true
+      "allowSingleLine": false
     }],
     "quotes": [
       2, "single", "avoid-escape"
