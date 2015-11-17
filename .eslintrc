@@ -76,7 +76,7 @@
     "block-scoped-var": 2,
 
     "consistent-return": 2,
-    "curly": [2, "all"],
+    "curly": [2, "multi-line"],
     "default-case": 2,
     "dot-notation": [2, {
       "allowKeywords": true
@@ -115,10 +115,10 @@
     "wrap-iife": [2, "any"],
     "yoda": 2,
 
-    "indent": [2, 4],
+    "indent": [2, 4, { "SwitchCase": 1 }],
     "brace-style": [2,
       "1tbs", {
-      "allowSingleLine": false
+      "allowSingleLine": true
     }],
     "quotes": [
       2, "single", "avoid-escape"
@@ -133,6 +133,7 @@
     "comma-style": [2, "last"],
     "eol-last": 2,
     "func-names": 1,
+    "jsx-quotes": [2, "prefer-double"],
     "key-spacing": [2, {
         "beforeColon": false,
         "afterColon": true
@@ -165,7 +166,6 @@
 
     "react/display-name": 0,
     "react/jsx-boolean-value": 2,
-    "react/jsx-quotes": [2, "double"],
     "react/jsx-no-undef": 2,
     "react/jsx-sort-props": 0,
     "react/jsx-sort-prop-types": 0,
@@ -190,6 +190,7 @@
         "lifecycle": [
           "displayName",
           "propTypes",
+          "defaultProps",
           "contextTypes",
           "childContextTypes",
           "mixins",

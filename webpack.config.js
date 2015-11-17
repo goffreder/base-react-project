@@ -22,13 +22,22 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules[\/\\]/,
-            loader: 'babel-loader?optional[]=es7.decorators'
+            loader: 'babel-loader',
+            query: {
+                stage: 0
+            }
         }, {
             test: /\.css$/,
             loader: 'style!css'
         }, {
-            test: /\.(eot|woff2|ttf|svg|woff)$/,
+            test: /\.(png|eot|woff2|ttf|svg|woff)$/,
             loader: 'url-loader'
+        }, {
+            test: /\.scss$/,
+            loader: 'style-loader!css-loader!autoprefixer-loader?browsers=last 2 version!sass-loader?outputStyle=compressed'
+        }, {
+            test: /\.json$/,
+            loader: 'json-loader'
         }]
     },
 
@@ -46,11 +55,13 @@ module.exports = {
             }
         }),
         new webpack.ProvidePlugin({
-            React: 'react/addons'
+            React: 'react',
+            ReactDOM: 'react-dom'
         })
     ],
-    
+
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx'],
+        modulesDirectories: ['node_modules', 'app', 'components']
     }
 };
