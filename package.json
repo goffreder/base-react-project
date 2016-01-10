@@ -14,5 +14,8 @@
     "npm-version": "npm version -m 'Deploying %s'",
     "start": "webpack-dev-server --inline",
     "test": "babel-node --stage=0 test/tests.js"
+  },
+  "babel": {
+    "stage": 0
   }
 }
