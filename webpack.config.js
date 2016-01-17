@@ -8,7 +8,7 @@ module.exports = {
 
     entry: {
         main: [
-            __dirname + '/node_modules/babel-core/browser-polyfill.js',
+            'babel-polyfill',
             './app/App.js'
         ]
     },
@@ -25,7 +25,7 @@ module.exports = {
 
     module: {
         noParse: [
-            /\/babel-core\/browser-polyfill\.js$/
+            /\/babel-polyfill\/dist\/polyfill\.js$/
         ],
         preLoaders: [{
             test: /\.jsx?$/,
@@ -34,19 +34,10 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules[\/\\]/,
-            loader: 'react-hot!babel-loader'
+            loader: 'react-hot!babel'
         }, {
             test: /\.css$/,
-            loader: 'style!css'
-        }, {
-            test: /\.(png|eot|woff2|ttf|svg|woff)$/,
-            loader: 'url-loader'
-        }, {
-            test: /\.scss$/,
-            loader: 'style-loader!css-loader!autoprefixer-loader?browsers=last 2 version!sass-loader?outputStyle=compressed'
-        }, {
-            test: /\.json$/,
-            loader: 'json-loader'
+            loader: 'style!css!postcss'
         }]
     },
 
